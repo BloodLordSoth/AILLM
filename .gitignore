@@ -1,0 +1,7 @@
+.env
+venv/
+calculator/
+dm_speech.mp3
+main2.py
+raistlin_reply.mp3
+tests.py
