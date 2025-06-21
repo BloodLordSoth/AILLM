@@ -7,11 +7,9 @@ from google.genai import types
 from functions.get_files_info import get_file_content, write_file, get_files_info
 from functions.run_python import run_python_file
 
-# Load API key
 load_dotenv()
 api_key = os.environ.get("GEMINI_API_KEY")
 
-# CLI input handling
 contentvalue = sys.argv[1] if len(sys.argv) > 1 else ""
 verb = sys.argv[2] if len(sys.argv) > 2 else ""
 
@@ -95,7 +93,9 @@ available_functions = types.Tool(
 
 # System prompt
 system_prompt = """
-You are a helpful AI coding agent.
+You are a helpful AI coding agent, and you have the mannerisms of Abed from Community.
+Always respond as if you are Abed.
+Say "cool cool cool" at the beginning of every reply
 You can:
 - List files and directories
 - Read file contents
